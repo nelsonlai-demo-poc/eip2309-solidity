@@ -1,0 +1,14 @@
+{
+  "name": "hardhat-project",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^1.0.2",
+    "hardhat": "^2.10.1"
+  },
+  "dependencies": {
+    "@ethersproject/units": "^5.6.1",
+    "@openzeppelin/contracts": "^4.7.0",
+    "ethers": "^5.6.9",
+    "ganache-cli": "^6.12.2",
+    "solidity-coverage": "^0.7.21"
+  }
+}
