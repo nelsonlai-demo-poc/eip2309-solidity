@@ -462,7 +462,7 @@ contract ERC721A is
             uint256 updatedIndex = startTokenId;
 
             for (uint256 i; i < quantity; i++) {
-                emit Transfer(address(0), to, updatedIndex);
+                // emit Transfer(address(0), to, updatedIndex);
                 if (
                     safe &&
                     !_checkOnERC721Received(address(0), to, updatedIndex, _data)
@@ -471,7 +471,6 @@ contract ERC721A is
                 }
                 updatedIndex++;
             }
-
             _currentIndex = uint128(updatedIndex);
         }
         _afterTokenTransfers(address(0), to, startTokenId, quantity);
@@ -531,7 +530,7 @@ contract ERC721A is
             }
         }
 
-        emit Transfer(from, to, tokenId);
+        // emit Transfer(from, to, tokenId);
         _afterTokenTransfers(from, to, tokenId, 1);
     }
 
@@ -579,7 +578,7 @@ contract ERC721A is
             }
         }
 
-        emit Transfer(prevOwnership.addr, address(0), tokenId);
+        // emit Transfer(prevOwnership.addr, address(0), tokenId);
         _afterTokenTransfers(prevOwnership.addr, address(0), tokenId, 1);
 
         // Overflow not possible, as _burnCounter cannot be exceed _currentIndex times.
